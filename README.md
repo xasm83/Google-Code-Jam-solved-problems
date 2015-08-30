@@ -1,1 +1,1 @@
-repository for solved algorithm problems like Code Jam, Hacker Rank, Code Eval, etc
+repository for solved  Google Code Jam problems
