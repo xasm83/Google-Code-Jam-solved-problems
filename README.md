@@ -1,1 +1,1 @@
-repository for solved  Google Code Jam problems
+repo for algorithm coding problems - leetcode, codejam, spoj
