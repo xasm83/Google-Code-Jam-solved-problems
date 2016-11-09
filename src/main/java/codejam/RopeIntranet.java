@@ -1,6 +1,4 @@
-
-import org.apache.commons.collections4.MultiMap;
-import org.apache.commons.collections4.map.MultiValueMap;
+package codejam;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +9,7 @@ import java.util.*;
 public class RopeIntranet {
     public static void calculate() throws IOException {
         Long start = System.currentTimeMillis();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(CodeJam.class.getResourceAsStream("ropeintranet.txt")))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(StoreCredit.class.getResourceAsStream("ropeintranet.txt")))) {
             int amountOfCases = Integer.valueOf(br.readLine());
             int currentCase = 1;
             while (currentCase < amountOfCases + 1) {
