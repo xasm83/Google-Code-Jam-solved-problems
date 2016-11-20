@@ -13,6 +13,7 @@ public class SmallestCommonNumberOfThreeArrays {
 
         //pick a, check b then check c if items does not match pick a next one from the current array and do a backtrace to a
         //check if a has matching item for a picked one.
+        //TODO could be re-written with 3 simple if and withour while true
         while (true) {
             int bInsertionPoint = Arrays.binarySearch(b, bCurrent, b.length, a[aCurrent]);
             if (bInsertionPoint >= 0) {
