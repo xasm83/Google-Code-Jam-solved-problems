@@ -27,4 +27,12 @@ public class RotateArray {
             cycleStartIndex++;
         }
     }
+
+    public void rotateViaSystemArrayCopy(int[] nums, int k) {
+        int[] newArray = new int[k];
+        k= k%nums.length;
+        System.arraycopy(nums, (nums.length-k), newArray,0,k);
+        System.arraycopy(nums,0, nums, k,(nums.length-k) );
+        System.arraycopy(newArray,0, nums,0,k);
+    }
 }
