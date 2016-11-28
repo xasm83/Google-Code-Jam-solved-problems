@@ -1,6 +1,5 @@
 package coderust;
 
-import sun.plugin.dom.exception.InvalidStateException;
 
 import java.util.Arrays;
 
@@ -47,7 +46,7 @@ public class ArrayMaximumSlidingWindow {
 
         void add(int item) {
             if (size == circleBufferArray.length) {
-                throw new InvalidStateException("Queue is full.");
+                throw new RuntimeException("Queue is full.");
             }
             circleBufferArray[headPointer] = item;
             headPointer = (headPointer + 1) % length;
@@ -56,7 +55,7 @@ public class ArrayMaximumSlidingWindow {
 
         int remove() {
             if (size == 0) {
-                throw new InvalidStateException("Queue is empty.");
+                throw new RuntimeException("Queue is empty.");
             }
             int value = circleBufferArray[tailPointer];
             tailPointer = (tailPointer + 1) % length;
