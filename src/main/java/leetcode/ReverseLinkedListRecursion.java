@@ -21,4 +21,17 @@ public class ReverseLinkedListRecursion {
 
         return reverse(listToReverse, newListToReverse);
     }
+
+    public ListNode reverseList2(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode tail = head.next;
+        ListNode newHead = reverseList2(head.next);
+        tail.next = head;
+        head.next = null;
+        return newHead;
+
+    }
 }

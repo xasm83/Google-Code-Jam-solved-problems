@@ -3,7 +3,9 @@ package leetcode;
 import java.util.Arrays;
 
 //https://www.educative.io/courses/algorithms-coding-interviews-java/q2mVgvQ6K2p#coding-exercise
-//for each weigth either include or exclude current element, if include check if i-1 element exists for w-wcurrent
+//we check all weight elements for a given weight threshold, for each element we either include or exclude it,
+//we exclude if current weight threshold smaller than elements weight,
+//if include check max i-1 element and current
 public class KnapsackProblem {
     public static int Knapsack(int profits[], int lp, int weights[], int lw, int capacity) {
         int totalWeight = capacity;
@@ -22,9 +24,7 @@ public class KnapsackProblem {
                                     profitsSums[index - 1][weight - weights[index - 1]] + profits[index - 1]);
                 }
             }
-            System.out.println(Arrays.deepToString(profitsSums));
         }
-        System.out.println(Arrays.deepToString(profitsSums));
         return profitsSums[weights.length][totalWeight];
     }
 }

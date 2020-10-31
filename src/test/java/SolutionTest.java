@@ -1,4 +1,3 @@
-import leetcode.WordSearch2;
 import org.junit.Test;
 
 

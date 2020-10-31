@@ -1,5 +1,8 @@
 package leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 //https://leetcode.com/problems/longest-palindromic-subsequence/
 //diff from palindromic substring  is that we continue search even if not  (s.charAt(0)==s.charAt(s.length()-1))
 //top down approach, two dimensional array for bottom up approach
